@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sharon Photography & Graphic Design - Fotografia e grafica professionale a Londra">
+  <title>Sharon Photography & Graphic Design</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background-color: #333; color: #fff; padding: 10px; display: flex; justify-content: space-between; align-items: center; z-index: 1000;">
+        <p style="margin: 0;">Questo sito utilizza cookie per migliorare l'esperienza utente. <a href="cookie-policy.html" style="color: #4caf50;">Leggi di più</a></p>
+        <button id="accept-cookies" style="background-color: #4caf50; border: none; color: white; padding: 10px; cursor: pointer;">Accetta</button>
+      </div>
+      
+      <script>
+        const banner = document.getElementById('cookie-banner');
+        const acceptButton = document.getElementById('accept-cookies');
+        acceptButton.addEventListener('click', () => {
+          banner.style.display = 'none';
+          localStorage.setItem('cookiesAccepted', 'true');
+        });
+        if (localStorage.getItem('cookiesAccepted') === 'true') {
+          banner.style.display = 'none';
+        }
+      </script>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Sharon Photography & Graphic Design</h1>
+      <p>Fotografia e grafica professionale a Londra</p>
+      <button class="cta" onclick="scrollToSection('contact')">Prenota il tuo servizio</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <img src="london-hero.jpg" alt="Foto di Londra" id="hero-image">
+    <div class="hero-overlay">
+      <h2>Arte e fotografia per ogni tua esigenza</h2>
+      <p>Sharon unisce passione, creatività e professionalità per offrire il meglio della fotografia e del design grafico.</p>
+      <button class="cta" onclick="scrollToSection('services')">Scopri i servizi</button>
+    </div>
+  </section>
+
+  <!-- Servizi -->
+  <section id="services">
+    <h2>I miei servizi</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <h3>Fotografia</h3>
+        <p>Dal reportage di matrimoni ai ritratti aziendali, offro servizi fotografici personalizzati.</p>
+        <button class="cta" onclick="scrollToSection('portfolio-photo')">Guarda il portfolio</button>
+      </div>
+      <div class="service-card">
+        <h3>Design Grafico</h3>
+        <p>Progetti grafici personalizzati, dalle presentazioni aziendali ai loghi.</p>
+        <button class="cta" onclick="scrollToSection('portfolio-graphic')">Esplora i progetti</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Fotografia -->
+  <section id="portfolio-photo">
+    <h2>Portfolio Fotografia</h2>
+    <div class="gallery">
+      <img src="photo1.jpg" alt="Foto 1">
+      <img src="photo2.jpg" alt="Foto 2">
+      <img src="photo3.jpg" alt="Foto 3">
+      <img src="photo4.jpg" alt="Foto 4">
+    </div>
+  </section>
+
+  <!-- Portfolio Grafica -->
+  <section id="portfolio-graphic">
+    <h2>Portfolio Grafica</h2>
+    <div class="gallery">
+      <img src="graphic1.jpg" alt="Progetto grafico 1">
+      <img src="graphic2.jpg" alt="Progetto grafico 2">
+      <img src="graphic3.jpg" alt="Progetto grafico 3">
+      <img src="graphic4.jpg" alt="Progetto grafico 4">
+    </div>
+  </section>
+
+  <!-- Contatti -->
+  <section id="contact">
+    <h2>Contattami</h2>
+    <p>Compila il modulo qui sotto per prenotare un servizio o per qualsiasi informazione.</p>
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Il tuo nome" required>
+      <input type="email" name="email" placeholder="La tua email" required>
+      <textarea name="message" placeholder="Descrivi il servizio che desideri" required></textarea>
+      <button type="submit" class="cta">Invia richiesta</button>
+    </form>
+  </section>
+
+  <!-- Privacy Policy -->
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p>Questo sito utilizza cookie per migliorare l'esperienza utente. Non condividiamo i tuoi dati con terze parti.</p>
+    <p>Per ulteriori dettagli, <a href="mailto:info@sharonphotography.com">contattaci</a>.</p>
+  </section>
+
+ 
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sharon Photographer. Tutti i diritti riservati.</p>
+    <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="cookie-policy.html">Cookie Policy</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+
+</html>
